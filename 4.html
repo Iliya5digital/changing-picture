@@ -1,0 +1,42 @@
+<html>
+<head>
+<META NAME="Key Words" CONTENT="Информационные технологии, Примеры JavaScript">
+<html>
+<head>
+<title>Изменение картинки при выборе из списка</title>
+</head>
+<script language="JavaScript">
+pictures = new Array()
+for(i=0;i<3;i++)
+   {
+    pictures[i] = new Image()
+    if(i==0) pictures[i].src = "/pictures/it/javascript/3.gif"
+    if(i==1) pictures[i].src = "/pictures/it/javascript/2.gif"
+    if(i==2) pictures[i].src = "/pictures/it/javascript/1.gif"
+   }
+function l_image()
+   {
+    document.images[0].src = pictures[document.form1.item.selectedIndex].src
+   }
+</SCRIPT>
+</head>
+<body bgcolor="#FFF5EE" text="#000000" link="#FF0000" alink="#FF0000" vlink="#A52A2A">
+<center><TABLE COLS=2 WIDTH="100%" >
+  <TR>
+    <th>
+      <form name=form1>
+      <select name=item onChange=l_image()>
+        <option>рисунок 1
+        <option>рисунок 2
+        <option selected>рисунок 3
+      </select>
+      </form>
+    </th>
+  </tr>
+  <tr>
+    <th ALIGN=CENTER VALIGN=CENTER>
+<IMG SRC="/pictures/it/javascript/1.gif" NAME="tool"></th>
+  </TR>
+</TABLE>
+</center>
+</body></html>
