@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Баннер</title>
+</head>
+<script language="JavaScript">
+i=0;
+img_a=new Array()
+img_a[0]=new Image()
+img_a[1]=new Image()
+img_a[0].src="logo.gif"
+img_a[1].src="lgcit.gif"
+
+function img_b()
+{
+document.images[0].src=img_a[i].src
+document.images[0].src=img_a[i].src
+i++
+if(i>1) i=0;
+setTimeout("img_b()", 2000)
+}
+
+</SCRIPT>
+</head>
+<body bgcolor="#ffffff" onLoad=img_b()>
+<img src="logo.gif">
+</body></html>
