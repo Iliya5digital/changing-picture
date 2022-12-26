@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Мультипликация по событию onLoad</title>
+</head>
+<script language="JavaScript">
+pictures = new Array()
+for(i=0;i<3;i++)
+   {
+    pictures[i] = new Image()
+    if(i==0) pictures[i].src = "/pictures/it/javascript/3.gif"
+    if(i==1) pictures[i].src = "/pictures/it/javascript/2.gif"
+    if(i==2) pictures[i].src = "/pictures/it/javascript/1.gif"
+   }
+n=1;
+flag=1;
+function scroll_image()
+   {
+    if(flag==1)
+      {
+       n++;if(n>2) n=0;
+       document.images[0].src = pictures[n].src
+      }
+    setTimeout("scroll_image()",1500);
+   }
+</SCRIPT>
+</head>
+<body bgcolor="#FFF5EE" text="#000000" link="#FF0000" alink="#FF0000"
+vlink="#A52A2A" onLoad=scroll_image()>
+<center><IMG SRC="/pictures/it/javascript/1.gif" NAME="tool">
+</center>
+</body></html>
