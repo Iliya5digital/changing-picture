@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<script language="JavaScript">
+
+<!-- анализируется версия броузера:-->
+browserName=navigator.appName;
+browserVer=parseInt(navigator.appVersion);
+if (browserName=="Netscape" && browserVer >= 3) version="n3";
+else version="n2";
+
+if (version=="n3") {
+graph1green=new Image(20,20);
+graph1green.src="lgcit.gif";
+graph1red=new Image(20,20);
+graph1red.src="logo.gif";
+}
+function graphON(graphName) {
+	if (version=="n3") {
+	green_red=eval(graphName + "green.src");
+	document.images[graphName].src=green_red;
+	}
+}
+function graphOFF(graphName) {
+	if (version=="n3") {
+	red_green=eval(graphName + "red.src");
+	document.images[graphName].src=red_green;
+	}
+}
+</script>
+<body bgcolor=ffffff>
+<a href="http://www.cit-forum.com" onMouseOver="graphON('graph1')" 
+onMouseOut="graphOFF('graph1')"><img src="logo.gif" name="graph1" border=0></a>
+</body>
+</html>
